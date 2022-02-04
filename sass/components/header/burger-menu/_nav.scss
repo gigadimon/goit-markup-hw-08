@@ -1,0 +1,21 @@
+.burger-navigation__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.burger-navigation__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $mainTextColor;
+}
+
+.burger-navigation__link:hover,
+.burger-navigation__link:focus {
+  color: $brandColor;
+}
+
+.burger-navigation__link--active {
+  color: $brandColor;
+}

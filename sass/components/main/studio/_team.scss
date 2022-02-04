@@ -1,0 +1,77 @@
+.team {
+  background-color: $secondaryBcgColor;
+}
+
+.team__member-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+
+    // центрирует список
+    margin: 0 auto;
+    width: 738px;
+  }
+}
+
+.team__networks {
+  margin-top: 16px;
+}
+
+.team__member-item {
+  padding-bottom: 24px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  background-color: $mainBcgColor;
+  width: 100%;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &:nth-child(2n + 1) {
+      margin-left: 0px;
+    }
+
+    &:nth-child(-n + 2) {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+    padding-bottom: 30px;
+  }
+}
+
+.team__member-name {
+  margin-top: 30px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team__member-specialization {
+  margin-top: 10px;
+
+  color: $secondaryTextColor;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}

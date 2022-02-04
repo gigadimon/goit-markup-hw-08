@@ -1,0 +1,28 @@
+.close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+
+  transition: fill 250ms $mainAnimationFunction;
+
+  &:hover,
+  &:focus {
+    fill: $brandColor;
+  }
+}
+
+.close-modal__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

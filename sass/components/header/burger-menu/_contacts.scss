@@ -1,0 +1,31 @@
+.burger-contacts {
+  margin-top: auto;
+  margin-bottom: 64px;
+}
+
+.burger-contacts__item {
+  margin-bottom: 32px;
+}
+
+.burger-contacts__link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $secondaryTextColor;
+  @media screen and (max-width: 479px) {
+    // применил отзывчивый размер шрифта, так как при открытии меню на экране меньше w480 (а такую ширину имеют многие современные телефоны) - цифры номера перемещаются на следующую строку, тк не вмещаются
+    font-size: calc((100vw - 320px) / (480 - 320) * (24 - 16) + 16px);
+  }
+}
+
+.burger-contacts__item:first-child .burger-contacts__link {
+  font-size: 34px;
+  line-height: 1.18;
+  color: $brandColor;
+  @media screen and (max-width: 479px) {
+    // применил отзывчивый размер шрифта, так как при открытии меню на экране меньше w480 (а такую ширину имеют многие современные телефоны) - цифры номера перемещаются на следующую строку, тк не вмещаются
+    font-size: calc((100vw - 320px) / (480 - 320) * (34 - 24) + 24px);
+  }
+}

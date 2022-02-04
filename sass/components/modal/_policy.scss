@@ -1,0 +1,75 @@
+.policy {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.17;
+
+  @media screen and (min-width: 480px) {
+    white-space: nowrap;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  color: $secondaryTextColor;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.policy__agree {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.policy__icon {
+  height: 16px;
+  margin-right: 7px;
+
+  transform: translateY(-0.5px);
+
+  transition: opacity 250ms $mainAnimationFunction, fill 250ms $mainAnimationFunction;
+}
+
+.policy__icon--active {
+  position: absolute;
+
+  opacity: 0;
+}
+
+.policy:hover .policy__icon--non-active {
+  fill: $brandColor;
+}
+
+.policy__agree:checked ~ .policy__icon--active {
+  opacity: 1;
+}
+
+.policy__agree:checked ~ .policy__icon--non-active {
+  opacity: 0;
+}
+
+.policy__link {
+  color: $brandColor;
+  margin-left: 4px;
+
+  transition: color 250ms $mainAnimationFunction;
+
+  &:hover,
+  &:focus {
+    color: #188ce8;
+  }
+}

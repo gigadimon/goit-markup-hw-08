@@ -1,0 +1,29 @@
+.networks-wrapper {
+  display: block;
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
+}
+
+.footer__networks {
+  margin-top: 20px;
+}
+
+.footer__networks .networks__link {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: $mainBcgColor;
+
+  &:hover,
+  &:focus {
+    background-color: $brandColor;
+  }
+}

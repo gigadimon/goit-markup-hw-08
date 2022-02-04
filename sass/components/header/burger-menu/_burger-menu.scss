@@ -1,0 +1,27 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: $mainBcgColor;
+
+  z-index: 999;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 250ms $mainAnimationFunction, visibility 250ms $mainAnimationFunction;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-container.is-open {
+  opacity: 1;
+  visibility: visible;
+}

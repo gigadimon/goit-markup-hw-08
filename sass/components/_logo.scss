@@ -1,0 +1,29 @@
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  text-decoration: none;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+}
+.accent {
+  color: $brandColor;
+}
+
+.header__logo {
+  color: $mainTextColor;
+
+  // @media screen and (max-width: 767px) {
+  //   position: absolute;
+  //   top: calc(100% + 16px);
+  //   left: 0;
+  // }
+}
+
+.footer__logo {
+  color: $mainBcgColor;
+}

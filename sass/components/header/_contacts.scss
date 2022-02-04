@@ -1,0 +1,96 @@
+.contacts {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+}
+
+.contacts__link {
+  // @media screen and (max-width: 767px) {
+  //   font-weight: 500;
+  //   font-size: 24px;
+  //   line-height: 1.17;
+  //   letter-spacing: 0.02em;
+  //   text-decoration: none;
+  //   color: $secondaryTextColor;
+
+  //   .contacts__item:last-child & {
+  //     @media screen and (max-width: 479px) {
+  //       
+  //     }
+  //     font-size: 34px;
+  //     line-height: 1.18;
+
+  //     color: $brandColor;
+  //   }
+  // }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    fill: $secondaryTextColor;
+    color: $secondaryTextColor;
+    text-decoration: none;
+
+    transition: fill 250ms $mainAnimationFunction, color 250ms $mainAnimationFunction;
+
+    &:hover,
+    &:focus {
+      color: $brandColor;
+      fill: $brandColor;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
+// размеры иконки телефона подогнать под размер 10х14, как в примере - невозможно. svg масштабируется и получается с шириной 10 только при высоте 16. поэтому решил оставить их такими же, как и при w1200+
+.contacts__icon {
+  // @media screen and (max-width: 767px) {
+  //   display: none;
+  // }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 8px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
+}
+
+.contacts__item {
+  // @media screen and (max-width: 767px) {
+  //   &:last-child {
+  //     margin-bottom: 32px;
+  //   }
+  // }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &:last-child {
+      transform: translateX(-3px);
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
