@@ -76,6 +76,7 @@ ul {
 
 .img {
   display: block;
+  width: 100%;
 }
 
 .main-list-item {
@@ -585,6 +586,13 @@ ul {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .hero {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bcg-480.jpg");
@@ -643,7 +651,9 @@ ul {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-left: -30px;
+    width: 738px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -659,9 +669,23 @@ ul {
   margin-top: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .peculiarities__item {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .peculiarities__item {
+    width: 354px;
+  }
   .peculiarities__item:nth-child(-n + 2) {
     margin-top: 0;
+  }
+  .peculiarities__item:nth-child(2n + 1) {
+    margin-left: 0;
   }
 }
 
@@ -1448,7 +1472,6 @@ ul {
   position: absolute;
   top: 50%;
   left: 50%;
-  overflow-y: scroll;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   padding: 40px;
@@ -1465,7 +1488,7 @@ ul {
 @media screen and (max-width: 479px) {
   .modal {
     width: 93.75%;
-    min-height: 90%;
+    min-height: 609px;
   }
 }
 
